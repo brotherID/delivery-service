@@ -1,0 +1,22 @@
+server:
+  port: 2222
+
+spring:
+  data:
+    mongodb:
+#      uri: mongodb://admin:admin123@localhost:27017/deliveryDb
+      username: admin
+      database: deliveryDb
+      password: admin123
+      port: '27017'
+      host: 127.0.0.1
+      authentication-database: admin
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb: TRACE
+      mongodb:
+        driver: TRACE
