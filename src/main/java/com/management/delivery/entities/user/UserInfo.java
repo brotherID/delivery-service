@@ -1,5 +1,6 @@
 package com.management.delivery.entities.user;
 
+import com.management.delivery.entities.base.Auditable;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "userInfo")
-public class UserInfo {
+public class UserInfo  extends Auditable {
     @Id
     private String id;
     private String username;
